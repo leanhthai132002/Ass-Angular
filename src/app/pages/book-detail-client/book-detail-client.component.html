@@ -1,0 +1,28 @@
+<div class="container">
+    <app-header></app-header>
+<div>
+    <div>
+        <a routerLink="/"><button>Quay lại</button></a>
+    </div>
+    <div>Tên: {{book.name}}</div>
+    <div>Giá: {{book.price}}</div>
+    <div>Mô tả: {{book.description}}</div>
+    <div>Trạng thái: {{book.status}}</div>
+    <div>
+        <input
+          type="number"
+          min="1"
+          class="form-control cart-value"
+          [value]="cartValue"
+          (input)="onChangeCartValue($event)"
+        />
+        <button
+          class="btn btn-success"
+          (click)="onAddToCart()"
+        >Thêm vào giỏ hàng</button>
+      </div>
+</div>
+<app-footer></app-footer>
+
+
+</div>

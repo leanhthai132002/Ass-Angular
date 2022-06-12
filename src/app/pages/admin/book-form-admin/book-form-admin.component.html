@@ -1,0 +1,26 @@
+<div>
+    <a routerLink="/admin/books">
+      <button class="btn btn-primary">Quay lại</button>
+    </a>
+  </div>
+  
+  <!-- Định nghĩa xem form được quản lý bởi biến nào -->
+  <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      Tên sách <input type="text" class="form-control" name="name" formControlName="name">
+      Giá hiện tại <input type="text" class="form-control" name="price" formControlName="price">
+      Giá sale <input type="text" class="form-control" name="sale_price" formControlName="sale_price">
+      Mô tả <input type="text" class="form-control" name="description" formControlName="description">
+      Ảnh <input type="text" class="form-control" name="image_url" formControlName="image_url">
+      Tình trạng <br>
+      Còn hàng<input type="radio" name="status" value="0" formControlName="status">
+      Hết hàng<input type="radio" name="status" value="1" formControlName="status">
+      
+    </div>
+    <div>
+      <button
+        class="btn btn-success"
+      >Submit</button>
+    </div>
+  </form>
+  
